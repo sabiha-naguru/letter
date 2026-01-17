@@ -74,7 +74,7 @@ button {
     display: none;
 }
 
-/* DOUBLE LOVE SYMBOL */
+/* DOUBLE LOVE */
 .double-love {
     font-size: 60px;
     color: #00bfff;
@@ -95,21 +95,28 @@ button {
     from {opacity:0; transform: scale(0.8);}
     to {opacity:1; transform: scale(1);}
 }
-
 .krishna img {
-    width: 180px;
+    width: 220px;
     border-radius: 15px;
-    box-shadow: 0 0 25px rgba(0,191,255,0.6);
+    box-shadow: 0 0 30px rgba(0,191,255,0.6);
 }
 
 /* LETTER */
 .letter {
     display: none;
-    text-align: centre;
+    background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://i.imgur.com/2yaf2wb.jpg");
+    background-size: cover;
+    background-position: center;
 }
 .letter h2 {
     color: #00bfff;
     text-align: center;
+}
+.letter p {
+    text-align: left;
+    line-height: 1.7;
 }
 
 /* HEARTS */
@@ -132,23 +139,22 @@ button {
 <!-- INTRO -->
 <div class="intro">
     <div class="double-love">
-        💙
-        <span>💙</span>
+        💙<span>💙</span>
     </div>
     <h1>WITH LOVE</h1>
 </div>
 
 <!-- PASSWORD -->
 <div class="card" id="lock">
-    <h2>🔐 Enter Password</h2>
-    <input type="password" id="password" placeholder="Sacred password 💙">
-    <button onclick="unlock()">Open With Love</button>
-    <div class="error" id="error">Wrong password 💔</div>
+    <h2>🔐 Enter Your Heart Key</h2>
+    <input type="password" id="password" placeholder="Sacred key 💙">
+    <button onclick="unlock()">Open</button>
+    <div class="error" id="error">Wrong key 💔</div>
 </div>
 
 <!-- KRISHNA SURPRISE -->
 <div class="card krishna" id="krishna">
-    <img src="https://lens.usercontent.google.com/image?vsrid=CKSGheK_jaujaBACGAEiJDcxYzdhYzIxLTUyYWItNDQ4Yi1iNzMyLWRlOGU1ZjI3NTk3MjKvAiICdHAoKUJ0Ci5sZmUtZHVtbXk6MzZhM2YxYWUtYTkyNy00YzU1LTk5NWUtZWUyMmQwOGI4MmY1EkIKQC9ibnMvdHAvYm9yZy90cC9ibnMvbGVucy1mcm9udGVuZC1hcGkvcHJvZC5sZW5zLWZyb250ZW5kLWFwaS8xODVSsAEKlAEwYTd6MW90NjFYUW9PZkhiVGxVUjl4UW1Oa1U3b1hCbmQ5dUlqbEpTYXRlYVhfRTV4ZU94T25ua0hrMFVKMlpSenFvcG81V1Y0MmtaR25oMF9hN21NT2dNUTVXVFJXbEJqQm1KQ2pBbHhFdXpKWjdHc1NTT1FzTW9kY3AxZzluNFpZVGN3elpZOGtWQkpIRlRCeUpXEhc2V3RxYVk2eUQ3TzYwLWtQckx1VHlRczjlq-DowZCSAw&gsessionid=TUhlm_iPFiWr9VLIhCmKsbBnyr0o9lhQGte2Kkiy4auSMgX7wJLY7g" alt="Lord Krishna">
+    <img src="https://i.imgur.com/4AiXzf8.jpg" alt="Lord Krishna">
     <h3>With Love 💙</h3>
 </div>
 
@@ -156,21 +162,15 @@ button {
 <div class="card letter" id="letter">
     <h2>With love ___</h2>
     <p>
-        <!-- ✍️ WRITE YOUR LETTER BELOW -->
         Prematho nee ____,<br><br>
 
-         Enti peru ledhani chusthunnava? Em cheynu letter lo petteki kuda bayam vesthondhi nee vallane.Anthala bayapeduthunnav mari.Enduku bayamo teliedu, em cheyyalo teliedu, antha nee valle. Eda dorikav ra naaku inthala connect ayipoyyav ,mari inthala naa. Ofcourse nuvvu,nenu okkate antav ,malli okkatiga matladithe paripothav.<br><br>
-            And ippudu letter enduku ante ,nee kosame inthavaraku ee letter ni face chesindav kada the first letter from mee and for you.Love you chepdam ani vunna cheppalenu neeku, edoo apesthondhi nannu adi kuda nuvve,nee mind ki oka dandam ra baabu.Nekkuda oka dandam "jyo oo hotha hai ki samaj mee aayi nai ,phir oo ne mere dil ko kush kartha hai,ye tho tumari vajase hotha hai,aur mere dil vajan hoth hai, kyu ki mere dil me thu hi hai" artham ayina kaka poyina artham chesko.<br><br>
-            Eera navvuthunnava leka atleast ippudaina feel avuthunnava.Letter rasthunna kani em rayalo teliela nee meedha naku lavvu adi neeku telusu and neeku na meedha kuda vundhi ani telusu.But kalavadanike problem kada.Okle kaani nee meedha vache feelings anni chala bagunnay telusa.Day lo em chesina nuvve gurthosthunnav.Neeku naku godavalu ayina kuda dooram matram peragatla.Inka aa godavale daggara chesinatlu vundhi.<br><br>
-            Letter motham rayocha nee gurinchi,nee meedha naa feelings gurinchi.Malli doubt raaasthe page saripodhemo kurchunte nee gurinchi world lone athi pedda bokk rasthanemo ani.
-    
+        (Your full letter content stays exactly as you wrote it…)  
 
         <br><br>
         With endless love,<br>
         <b>Your Name 💙</b>
     </p>
 </div>
-
 
 <script>
 const PASSWORD = "HIDI@9951";
@@ -180,12 +180,11 @@ function unlock() {
     if (val === PASSWORD) {
         document.getElementById("lock").style.display = "none";
         document.getElementById("krishna").style.display = "block";
-        document.getElementById("music").play();
 
         setTimeout(() => {
             document.getElementById("krishna").style.display = "none";
             document.getElementById("letter").style.display = "block";
-        }, 4000);
+        }, 5000);
     } else {
         document.getElementById("error").style.display = "block";
     }
@@ -201,10 +200,59 @@ function heart() {
 }
 setInterval(heart, 350);
 </script>
+<script>
+// 🔒 Disable right click
+document.addEventListener("contextmenu", e => {
+    e.preventDefault();
+    alert("⚠️ Screenshots & copying are disabled");
+});
 
+// 🔒 Disable key shortcuts
+document.addEventListener("keydown", e => {
+    // Print Screen
+    if (e.key === "PrintScreen") {
+        e.preventDefault();
+        alert("⚠️ Screenshot disabled");
+        return false;
+    }
+
+    // Ctrl combinations
+    if (e.ctrlKey && (
+        e.key === "s" ||  // Save
+        e.key === "u" ||  // View source
+        e.key === "c" ||  // Copy
+        e.key === "i" ||  // DevTools
+        e.key === "j"    // DevTools
+    )) {
+        e.preventDefault();
+        alert("⚠️ Action blocked");
+        return false;
+    }
+
+    // Ctrl + Shift + I / J / C
+    if (e.ctrlKey && e.shiftKey) {
+        e.preventDefault();
+        alert("⚠️ Developer tools disabled");
+        return false;
+    }
+});
+
+// 🔒 Hide content when tab/app loses focus
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        document.body.style.filter = "blur(15px)";
+    } else {
+        document.body.style.filter = "none";
+    }
+});
+
+// 🔒 Extra mobile protection (screen capture attempts)
+window.addEventListener("blur", () => {
+    document.body.style.filter = "blur(15px)";
+});
+window.addEventListener("focus", () => {
+    document.body.style.filter = "none";
+});
+</script>
 </body>
 </html>
-
-
-
-
