@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Love ❤️</title>
+<title>Your Love 💙</title>
 
 <style>
 body {
@@ -30,6 +30,16 @@ body {
     color: #00bfff;
     text-shadow: 0 0 15px #00bfff;
 }
+.double-love {
+    font-size: 60px;
+    color: #00bfff;
+    position: relative;
+}
+.double-love span {
+    position: absolute;
+    left: 18px;
+    opacity: 0.6;
+}
 @keyframes fadeOut {
     0% {opacity:1;}
     70% {opacity:1;}
@@ -44,8 +54,8 @@ body {
     width: 90%;
     max-width: 420px;
     box-shadow: 0 0 30px rgba(0,191,255,0.4);
-    z-index: 5;
     border: 1px solid #00bfff;
+    z-index: 5;
 }
 
 /* INPUT */
@@ -74,52 +84,34 @@ button {
     display: none;
 }
 
-/* DOUBLE LOVE */
-.double-love {
-    font-size: 60px;
-    color: #00bfff;
-    position: relative;
-}
-.double-love span {
-    position: absolute;
-    left: 15px;
-    opacity: 0.7;
-}
-
-/* KRISHNA SURPRISE */
+/* KRISHNA */
 .krishna {
     display: none;
-    animation: appear 2s ease-in-out forwards;
-}
-@keyframes appear {
-    from {opacity:0; transform: scale(0.8);}
-    to {opacity:1; transform: scale(1);}
+    animation: appear 2s ease forwards;
 }
 .krishna img {
-    width: 220px;
+    width: 100%;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0,191,255,0.6);
+    box-shadow: 0 0 25px rgba(0,191,255,0.7);
+}
+@keyframes appear {
+    from {opacity:0; transform: scale(0.85);}
+    to {opacity:1; transform: scale(1);}
 }
 
 /* LETTER */
 .letter {
     display: none;
-    background: 
+    color: white;
+    background:
         linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url("https://i.imgur.com/2yaf2wb.jpg");
-    background-size: cover;
-    background-position: center;
+        url("krishna.jpg.jpeg") center/cover no-repeat;
 }
 .letter h2 {
     color: #00bfff;
-    text-align: center;
-}
-.letter p {
-    text-align: left;
-    line-height: 1.7;
 }
 
-/* HEARTS */
+/* FLOATING HEARTS */
 .heart {
     position: absolute;
     font-size: 18px;
@@ -138,55 +130,55 @@ button {
 
 <!-- INTRO -->
 <div class="intro">
-    <div class="double-love">
-        💙<span>💙</span>
-    </div>
+    <div class="double-love">💙<span>💙</span></div>
     <h1>WITH LOVE</h1>
 </div>
 
 <!-- PASSWORD -->
 <div class="card" id="lock">
     <h2>🔐 Enter Your Heart Key</h2>
-    <input type="password" id="password" placeholder="Sacred key 💙">
+    <input type="password" id="password" placeholder="Sacred password 💙">
     <button onclick="unlock()">Open</button>
-    <div class="error" id="error">Wrong key 💔</div>
+    <div class="error" id="error">Wrong password 💔</div>
 </div>
 
-<!-- KRISHNA SURPRISE -->
+<!-- KRISHNA DISPLAY -->
 <div class="card krishna" id="krishna">
-    <img src="https://i.imgur.com/4AiXzf8.jpg" alt="Lord Krishna">
+    <img src="krishna.jpg.jpeg" alt="Lord Krishna">
     <h3>With Love 💙</h3>
 </div>
 
 <!-- LETTER -->
 <div class="card letter" id="letter">
-    <h2>With love ___</h2>
+    <h2>With Love 💙</h2>
     <p>
-        Prematho nee ____,<br><br>
-          Enti peru ledhani chusthunnava? Em cheynu letter lo petteki kuda bayam vesthondhi nee vallane.Anthala bayapeduthunnav mari.Enduku bayamo teliedu, em cheyyalo teliedu, antha nee valle. Eda dorikav ra naaku inthala connect ayipoyyav ,mari inthala naa. Ofcourse nuvvu,nenu okkate antav ,malli okkatiga matladithe paripothav.<br><br>
+        ✍️ Write your letter here…<br><br>
+
+        Prematho nee ______,<br><br>
+         Enti peru ledhani chusthunnava? Em cheynu letter lo petteki kuda bayam vesthondhi nee vallane.Anthala bayapeduthunnav mari.Enduku bayamo teliedu, em cheyyalo teliedu, antha nee valle. Eda dorikav ra naaku inthala connect ayipoyyav ,mari inthala naa. Ofcourse nuvvu,nenu okkate antav ,malli okkatiga matladithe paripothav.<br><br>
             And ippudu letter enduku ante ,nee kosame inthavaraku ee letter ni face chesindav kada the first letter from mee and for you.Love you chepdam ani vunna cheppalenu neeku, edoo apesthondhi nannu adi kuda nuvve,nee mind ki oka dandam ra baabu.Nekkuda oka dandam "jyo oo hotha hai ki samaj mee aayi nai ,phir oo ne mere dil ko kush kartha hai,ye tho tumari vajase hotha hai,aur mere dil vajan hoth hai, kyu ki mere dil me thu hi hai" artham ayina kaka poyina artham chesko.<br><br>
             Eera navvuthunnava leka atleast ippudaina feel avuthunnava.Letter rasthunna kani em rayalo teliela nee meedha naku lavvu adi neeku telusu and neeku na meedha kuda vundhi ani telusu.But kalavadanike problem kada.Okle kaani nee meedha vache feelings anni chala bagunnay telusa.Day lo em chesina nuvve gurthosthunnav.Neeku naku godavalu ayina kuda dooram matram peragatla.Inka aa godavale daggara chesinatlu vundhi.<br><br>
-            Letter motham rayocha nee gurinchi,nee meedha naa feelings gurinchi.Malli doubt raaasthe page saripodhemo kurchunte nee gurinchi world lone athi pedda bokk rasthanemo ani.
+            Letter motham rayocha nee gurinchi,nee meedha naa feelings gurinchi.Malli doubt raaasthe page saripodhemo kurchunte nee gurinchi world lone athi pedda bokk rasthanemo ani.  
+        Every thought finds its way back to you.<br><br>
 
-         
-
-        <br><br>
         With endless love,<br>
-        <b>Nee ....... 💙</b>
+        <b>Nee ...... 💙</b>
     </p>
 </div>
 
 <script>
+/* PASSWORD */
 const PASSWORD = "HIDI@9951";
 
 function unlock() {
     const val = document.getElementById("password").value;
     if (val === PASSWORD) {
         document.getElementById("lock").style.display = "none";
-        document.getElementById("krishna").style.display = "block";
+        const k = document.getElementById("krishna");
+        k.style.display = "block";
 
         setTimeout(() => {
-            document.getElementById("krishna").style.display = "none";
+            k.style.display = "none";
             document.getElementById("letter").style.display = "block";
         }, 5000);
     } else {
@@ -194,6 +186,7 @@ function unlock() {
     }
 }
 
+/* FLOATING HEARTS */
 function heart() {
     const h = document.createElement("div");
     h.className = "heart";
@@ -203,61 +196,26 @@ function heart() {
     setTimeout(() => h.remove(), 6000);
 }
 setInterval(heart, 350);
-</script>
-<script>
-// 🔒 Disable right click
-document.addEventListener("contextmenu", e => {
-    e.preventDefault();
-    alert("⚠️ Screenshots & copying are disabled");
-});
 
-// 🔒 Disable key shortcuts
+/* SCREENSHOT PROTECTION */
+document.addEventListener("contextmenu", e => e.preventDefault());
+
 document.addEventListener("keydown", e => {
-    // Print Screen
-    if (e.key === "PrintScreen") {
+    if (
+        e.key === "PrintScreen" ||
+        (e.ctrlKey && ["s","u","c","i","j"].includes(e.key)) ||
+        (e.ctrlKey && e.shiftKey)
+    ) {
         e.preventDefault();
-        alert("⚠️ Screenshot disabled");
-        return false;
-    }
-
-    // Ctrl combinations
-    if (e.ctrlKey && (
-        e.key === "s" ||  // Save
-        e.key === "u" ||  // View source
-        e.key === "c" ||  // Copy
-        e.key === "i" ||  // DevTools
-        e.key === "j"    // DevTools
-    )) {
-        e.preventDefault();
-        alert("⚠️ Action blocked");
-        return false;
-    }
-
-    // Ctrl + Shift + I / J / C
-    if (e.ctrlKey && e.shiftKey) {
-        e.preventDefault();
-        alert("⚠️ Developer tools disabled");
+        alert("⚠️ Protected content");
         return false;
     }
 });
 
-// 🔒 Hide content when tab/app loses focus
 document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-        document.body.style.filter = "blur(15px)";
-    } else {
-        document.body.style.filter = "none";
-    }
-});
-
-// 🔒 Extra mobile protection (screen capture attempts)
-window.addEventListener("blur", () => {
-    document.body.style.filter = "blur(15px)";
-});
-window.addEventListener("focus", () => {
-    document.body.style.filter = "none";
+    document.body.style.filter = document.hidden ? "blur(15px)" : "none";
 });
 </script>
+
 </body>
 </html>
-
