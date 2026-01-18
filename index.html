@@ -109,6 +109,7 @@ button {
     max-height: 85vh;
     overflow-y:auto;
     padding-right:10px;
+    scroll behaviour:smooth;
 }
 .letter h2 {
     color: #00bfff;
@@ -181,13 +182,38 @@ function unlock() {
 
         setTimeout(() => {
             k.style.display = "none";
-            document.getElementById("letter").style.display = "block";
+            const letter = document.getElementById("letter");
+            letter.style.display = "block";
+            letter.scrollTop = 0;
+            userInteracted = false;
+            startAutoScroll();
+           
         }, 5000);
     } else {
         document.getElementById("error").style.display = "block";
     }
 }
+let autoScrollInterval;
+let userInteracted = false;
 
+function startAutoScroll() {
+    const letter = document.getElementById("letter");
+
+    autoScrollInterval = setInterval(() => {
+        if (!userInteracted) {
+            letter.scrollTop += 1; // speed (increase for faster)
+        }
+    }, 40); // smoothness (lower = smoother)
+}
+
+// Stop auto-scroll if user interacts
+["wheel", "touchstart", "keydown", "mousedown"].forEach(evt => {
+    document.addEventListener(evt, () => {
+        userInteracted = true;
+        clearInterval(autoScrollInterval);
+    }, { once: true });
+});
+    
 /* FLOATING HEARTS */
 function heart() {
     const h = document.createElement("div");
@@ -221,6 +247,7 @@ document.addEventListener("visibilitychange", () => {
 
 </body>
 </html>
+
 
 
 
